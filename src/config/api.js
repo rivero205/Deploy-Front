@@ -1,4 +1,4 @@
-export const API_URL = 'http://localhost:4500/api';
+export const API_URL = 'https://servidor-sun.onrender.com/api';
 
 export const endpoints = {
     getAllData: `${API_URL}/datos`,
