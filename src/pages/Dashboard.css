@@ -1,0 +1,99 @@
+.dashboard {
+  width: 100%;
+}
+
+.dashboard-header {
+  margin-bottom: 30px;
+}
+
+.dashboard-header h1 {
+  font-size: 24px;
+  color: #ffffff;
+  position: relative;
+  display: inline-block;
+}
+
+.dashboard-header h1::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background: linear-gradient(90deg, #4f8df9, #f9a94f);
+  border-radius: 3px;
+}
+
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.charts-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
+.loading, .error-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  text-align: center;
+  padding: 20px;
+}
+
+.loading-sun {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.loading-sun-core {
+  width: 30px;
+  height: 30px;
+  background-color: #f9a94f;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 2;
+  box-shadow: 0 0 20px #f9a94f;
+  animation: pulse 2s infinite;
+}
+
+.loading-sun-rays {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  background: radial-gradient(circle, transparent 40%, #f9a94f 40%, #f9a94f 43%, transparent 43%);
+  animation: rotate 10s linear infinite;
+}
+
+.error-message {
+  background-color: rgba(249, 79, 79, 0.1);
+  border-radius: 12px;
+  border: 1px solid #f94f4f;
+}
+
+.error-message h2 {
+  color: #f94f4f;
+  margin-bottom: 10px;
+}
+
+.error-message p {
+  color: #e0e0e0;
+}
+
+@media (max-width: 1200px) {
+  .charts-container {
+    grid-template-columns: 1fr;
+  }
+}
+
